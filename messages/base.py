@@ -1,8 +1,8 @@
 import traceback
 from datetime import datetime
 from store.mongo import MongoStore
-
 from config.helper import config
+from scripts import globalVar
 
 class Base:
 
@@ -20,7 +20,22 @@ class Base:
         
         return None
 
-    def persists(self):
+    def persists(self, message_type=""):
+        user = self.user()
+        d = {
+            'id': str(user.id),
+            'shortId': str(user.shortId),
+            'nickname': user.nickname,
+            'gender': str(user.gender),
+            "roomId": str(self.instance.common.roomId),
+            'content': self.format_content(),
+            "type": message_type,
+            "payGradeLevel": user.badgeImageList.content.level,
+            "alternativeText":  user.badgeImageList.content.alternativeText,
+            "followingCount": str(user.followInfo.followingCount),
+            "followerCount": str(user.followInfo.followingCount)
+        }
+        globalVar.get_value("queue").put(d)
         if config()['mongo']['enabled'] != 'on':
             return
 

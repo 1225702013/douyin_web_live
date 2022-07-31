@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1122</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>主界面</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableUI">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>841</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>序号</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>UUID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>账号</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>昵称</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>类型</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>消息</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>性别</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>粉丝等级</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>粉丝数</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>关注数</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QGraphicsView" name="imageUI">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>100</y>
+      <width>251</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="interactive">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="linkButton">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>30</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>链接</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exportAll">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>30</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>导出全部</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exportShortID">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>30</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>导出账号</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textUI">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>370</y>
+      <width>251</width>
+      <height>251</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>411</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>直播间链接:</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="linkeEdit"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>431</x>
+      <y>30</y>
+      <width>88</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>性别:</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="sexBox">
+       <item>
+        <property name="text">
+         <string>不限</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>男</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>女</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>30</y>
+      <width>148</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>消息类型:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="messageBox">
+       <item>
+        <property name="text">
+         <string>不限</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>发言</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>进入直播间</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>点赞</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>关注</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>送礼物</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

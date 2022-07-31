@@ -9,7 +9,7 @@ class Writer:
     def websocket_message(self, flow: http.HTTPFlow) :
         re_c = re.search('webcast3-ws-web-.*\.douyin\.com', flow.request.host)
         if re_c :
-            with open('/Users/geng/douyin_live/' + uuid.uuid4().hex, 'wb') as f:
+            with open('./dir/' + uuid.uuid4().hex, 'wb') as f:
                 mess = flow.websocket.messages[-1].content
                 f.write(bytes(mess))
 
